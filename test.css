@@ -3,8 +3,5 @@ filter: grayscale(90%);
 transition: 1s;
 }
 .wrap:hover {
-filter: blur(5px);
-}
-p{
-  font-size: 30px;
+filter: grayscale(0);
 }
