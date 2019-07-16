@@ -12,6 +12,8 @@ body {
 html {
   -webkit-scroll-behavior: smooth;
   scroll-behavior: smooth;
+  -webkit-overflow: scroll;
+  overflow: scroll;
 }
 
 main {
