@@ -46,7 +46,7 @@ h3 {
 }
 
 .top-wrap {
-  background-image: url(img/back.jpg);
+  background-image: url(..img/back.jpg);
   background-position: center center;
   background-size: cover;
   width: 100%;
