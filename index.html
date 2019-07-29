@@ -4,35 +4,67 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- swiper css -->
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- swiper用CDN/ css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
-    <!-- css -->
-    <link rel="stylesheet" href="test.css">
+    <!-- ドロワーメニュー用CDN/drawer.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/css/drawer.min.css">
+    <!-- ドロワーjquery & iScroll -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
+    <!-- cssとレスポンシブcss -->
+    <link rel="stylesheet" href="scss/30days.css">
+    <link rel="stylesheet" href="scss/responsive.css">
     <!-- Googleフォント -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="icon" href="img/30days.ico">
     <title>デイトラ2nd模写</title>
     <!-- jQuery読み込み -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
 </head>
 
-<body>
+<body class="drawer drawer--right">
     <!--======= top-wrap =======-->
     <div class="top-wrap">
-        <header>
+        <!-- PC画面用のheader -->
+        <header id="pc-header">
             <ul class="english">
                 <li><a href="#news">News</a></li>
                 <li><a href="#service">Service</a></li>
                 <li><a href="#results">Results</a></li>
                 <li><a href="#price">Price</a></li>
-                <li><a href="#price">Comments</a></li>
+                <li><a href="#comments">Comments</a></li>
                 <li><a href="#faqs">FAQs</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="sp-logo">
+                <img src="img/logo.png" alt="">
+            </div>
         </header>
+        <!--====↓↓↓スマホ用ドロワーここから ↓↓↓===-->
+        <header role="banner">    
+            <!-- ハンバーガーボタン -->
+                <button type="button" class="drawer-toggle drawer-hamburger">
+                      <span class="sr-only">toggle navigation</span>
+                      <span class="drawer-hamburger-icon"></span>
+                   </button>    
+            <!-- ナビゲーションの中身 -->
+            <nav class="drawer-nav" role="navigation">
+                <ul class="drawer-menu english">
+                    <li><a href="#news" class="drawer-menu-item">News</a></li>
+                    <li><a href="#service" class="drawer-menu-item">Service</a></li>
+                    <li><a href="#results" class="drawer-menu-item">Results</a></li>
+                    <li><a href="#price" class="drawer-menu-item">Price</a></li>
+                    <li><a href="#comments" class="drawer-menu-item">Comments</a></li>
+                    <li><a href="#faqs" class="drawer-menu-item">FAQs</a></li>
+                    <li><a href="#contact" class="drawer-menu-item">Contact</a></li>
+                </ul>    
+            </nav>
+        </header>
+        <!--==== ↑↑↑スマホ用ドロワーここまで↑↑↑ ===-->
         <div class="top-contents">
-            <h1>詩が生れて、画が出来る。<br>とかくに人の世は住みにくい。</h1>
+            <h2>詩が生れて、画が出来る。<br>とかくに人の世は住みにくい。</h2>
             <p>どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
             <div class="contact-btn">
                 <a href="#">お問い合わせしてみる</a>
@@ -42,130 +74,342 @@
 
     <!--======= NEWS =======-->
     <main>
-        <div id="news" class="anchor"></div>
-        <div class="news">
-            <h2 class="english">News</h2>
-            <div class="news-contents">
-                <p>2019-07-14</p>
-                <div class="news-tag">テキスト</div>
-                <p class="news-text">ニュースニュースニュースニュースニュースニュースニュース
-                    ニュースニュースニュースニュースニュースニュースニュース</p>
-                <img src="img/news-arrow.svg" alt="矢印">
-            </div>
-            <div class="news-contents">
-                <p>2019-07-14</p>
-                <div class="news-tag">テキスト</div>
-                <p class="news-text">ニュースニュースニュースニュースニュースニュースニュース</p>
-                <img src="img/news-arrow.svg" alt="矢印">
-            </div>
-            <div class="news-contents">
-                <p>2019-07-14</p>
-                <div class="news-tag">テキスト</div>
-                <p class="news-text">ニュースニュースニュースニュースニュースニュースニュース</p>
-                <img src="img/news-arrow.svg" alt="矢印">
-            </div>
-            <div class="more-btn english">
-                <a href="#">MORE</a>
+        <div id="news" class="anchor">
+            <div class="news">
+                <h2 class="english">News</h2>
+                <div class="news-contents">
+                    <p>2019-07-14</p>
+                    <div class="news-tag">テキスト</div>
+                    <p class="news-text">ニュースニュースニュースニュースニュースニュースニュース
+                        ニュースニュースニュースニュースニュースニュースニュース</p>
+                    <img src="img/news-arrow.svg" alt="矢印">
+                </div>
+                <div class="news-contents">
+                    <p>2019-07-14</p>
+                    <div class="news-tag">テキスト</div>
+                    <p class="news-text">ニュースニュースニュースニュースニュースニュースニュース</p>
+                    <img src="img/news-arrow.svg" alt="矢印">
+                </div>
+                <div class="news-contents">
+                    <p>2019-07-14</p>
+                    <div class="news-tag">テキスト</div>
+                    <p class="news-text">ニュースニュースニュースニュースニュースニュースニュース</p>
+                    <img src="img/news-arrow.svg" alt="矢印">
+                </div>
+                <div class="more-btn english">
+                    <a href="#">MORE</a>
+                </div>
             </div>
         </div>
 
         <!--=====service============  -->
         <div class="anchor2" id="service"></div>
         <div class="service">
-            <h2>Service</h2>
+            <h2 class="english">Service</h2>
             <div class="service-con-wrap">
                 <div class="service-contents">
                     <img src="img/service1.svg" alt="PCロゴ">
-                    <h3>WEB<br>DESIGN</h3>
+                    <h3 class="english">WEB<br>DESIGN</h3>
                     <p>どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
                 </div>
                 <div class="service-contents">
                     <img src="img/service2.svg" alt="PCロゴ">
-                    <h3>WEB<br>CODING</h3>
+                    <h3 class="english">WEB<br>CODING</h3>
                     <p>どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
                 </div>
                 <div class="service-contents">
                     <img src="img/service3.svg" alt="PCロゴ">
-                    <h3>CMS<br>CUSTOMIZE</h3>
+                    <h3 class="english">CMS<br>CUSTOMIZE</h3>
                     <p>どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
                 </div>
             </div>
         </div>
 
         <!--=====Results============  -->
-        <div class="anchor2" id="results"></div>
+        <div class="anchor3" id="results"></div>
         <div class="results">
             <h2 class="english">Results</h2>
 
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide slide1">
+                    <div class="swiper-slide ">
                         <img src="img/pc-image.jpg" alt="pc画像">
                         <div class="slide-text">
                             <h3>とかくに人の世は住みにくい。</h3>
                             <p>どこへ越しても住みにくいと悟った時、詩が生れて 、画が出来る。意地を通せば窮屈だ。</p>
                         </div>
                     </div>
-                    <div class="swiper-slide slide1">
+                    <div class="swiper-slide ">
                         <img src="img/pc-image.jpg" alt=" pc画像">
                         <div class="slide-text">
                             <h3>とかくに人の世は住みにくい。</h3>
                             <p>どこへ越しても住みにくいと悟った時、詩が生れて 、画が出来る。意地を通せば窮屈だ。</p>
                         </div>
                     </div>
-                    <div class="swiper-slide slide1">
+                    <div class="swiper-slide ">
                         <img src="img/pc-image.jpg" alt="pc画像">
                         <div class="slide-text">
                             <h3>とかくに人の世は住みにくい。</h3>
                             <p>どこへ越しても住みにくいと悟った時、詩が生れて 、画が出来る。意地を通せば窮屈だ。</p>
                         </div>
                     </div>
-                    <div class="swiper-slide slide1">
+                    <div class="swiper-slide ">
                         <img src="img/pc-image.jpg" alt="pc画像">
                         <div class="slide-text">
                             <h3>とかくに人の世は住みにくい。</h3>
                             <p>どこへ越しても住みにくいと悟った時、詩が生れて 、画が出来る。意地を通せば窮屈だ。</p>
                         </div>
                     </div>
-                    <div class="swiper-slide slide1">
+                    <div class="swiper-slide ">
                         <img src="img/pc-image.jpg" alt="pc画像">
                         <div class="slide-text">
                             <h3>とかくに人の世は住みにくい。</h3>
                             <p>どこへ越しても住みにくいと悟った時、詩が生れて 、画が出来る。意地を通せば窮屈だ。</p>
                         </div>
                     </div>
-                    <div class="swiper-slide slide1">
-                        <img src="img/pc-image.jpg" alt="pc画像">
-                        <div class="slide-text">
-                            <h3>とかくに人の世は住みにくい。</h3>
-                            <p>どこへ越しても住みにくいと悟った時、詩が生れて 、画が出来る。意地を通せば窮屈だ。</p>
-                        </div>
-                    </div>
+
                 </div>
+                <!-- 次へと前へボタンは非表示 -->
                 <!-- <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div> -->
             </div>
             <div class="swiper-pagination"></div>
+            <div class="view-btn">
+                <a href="#" class="english">VIEW ALL</a>
+            </div>
         </div>
 
+        <!--=====price============  -->
+        <div class="anchor2" id="price"></div>
+        <div class="price">
+            <h2 class="english">Price</h2>
+            <table>
+                <tr>
+                    <td>row1</td>
+                    <td>Price ¥10,000</td>
+                </tr>
+                <tr>
+                    <td>row2</td>
+                    <td>Price ¥10,000</td>
+                </tr>
+                <tr>
+                    <td>row3</td>
+                    <td>Price ¥10,000</td>
+                </tr>
+
+            </table>
+            <p>※ 上記料金はサンプルです。</p>
+        </div>
+
+        <!--=====Comments============  -->
+        <div class="anchor4" id="comments"></div>
+        <div class="glay-back">
+            <div class="comments">
+                <h2 class="english">Comments</h2>
+                <div class="come-contents">
+                    <img src="img/woman.jpg" alt="女性">
+                    <p>どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
+                </div>
+                <div class="come-contents">
+                    <img src="img/man.jpg" alt="男性">
+                    <p>どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
+                </div>
+            </div>
+            <div class="people4">
+                <img src="img/comments3.png" alt="4人の男女">
+            </div>
+        </div>
+
+        <!--=====faqs Q&A============  -->
+        <div class="anchor2" id="faqs"></div>
+        <div class="faqs-back">
+            <h2 class="english">Q&A</h2>
+
+            <div class="fq-wrap">
+                <div class="faq-question">
+                    <div class="q-left">
+                        <div class="q-icon">Q</div>
+                        <h4>質問質問質問？</h4>
+                    </div>
+                    <div class="yazirushi"></div>
+                </div>
+                <div class="answer">
+                    <p>回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答</p>
+                </div>
+            </div>
+            <div class="fq-wrap">
+                <div class="faq-question">
+                    <div class="q-left">
+                        <div class="q-icon">Q</div>
+                        <h4>質問質問質問？ また、質問は質問質問？</h4>
+                    </div>
+                    <div class="yazirushi"></div>
+                </div>
+                <div class="answer">
+                    <p>回答回答回答回答回答回答回答回答回答回答回答回答</p>
+                </div>
+            </div>
+            <div class="fq-wrap">
+                <div class="faq-question">
+                    <div class="q-left">
+                        <div class="q-icon">Q</div>
+                        <h4>質問質問質問？</h4>
+                    </div>
+                    <div class="yazirushi"></div>
+                </div>
+                <div class="answer">
+                    <p>回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答</p>
+                </div>
+            </div>
+            <div class="fq-wrap">
+                <div class="faq-question">
+                    <div class="q-left">
+                        <div class="q-icon">Q</div>
+                        <h4>質問質問質問？</h4>
+                    </div>
+                    <div class="yazirushi"></div>
+                </div>
+                <div class="answer">
+                    <p>回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答</p>
+                </div>
+            </div>
+            <div class="fq-wrap">
+                <div class="faq-question">
+                    <div class="q-left">
+                        <div class="q-icon">Q</div>
+                        <h4>質問質問質問？</h4>
+                    </div>
+                    <div class="yazirushi"></div>
+                </div>
+                <div class="answer">
+                    <p>回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答</p>
+                </div>
+            </div>
+            <div class="fq-wrap">
+                <div class="faq-question">
+                    <div class="q-left">
+                        <div class="q-icon">Q</div>
+                        <h4>質問質問質問？</h4>
+                    </div>
+                    <div class="yazirushi"></div>
+                </div>
+                <div class="answer">
+                    <p>回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答</p>
+                </div>
+            </div>
+        </div>
+
+        <!--=====Access============  -->
+        <div class="access-back">
+            <h2 class="english">Access</h2>
+            <address>〒106-6126<br>東京都港区六本木 6丁目 10-1<br>六本木ヒルズ森タワー</address>
+            <div class="map-btn">
+                <a href="https://www.google.co.jp/maps/place/Google%E5%90%88%E5%90%8C%E4%BC%9A%E7%A4%BE/@35.660411,139.7270763,17z/data=!3m1!4b1!4m5!3m4!1s0x60188b770913970d:0xccc3467fcb15b353!8m2!3d35.660411!4d139.729265"
+                    target="_blank" class="english">Google Maps</a>
+            </div>
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.6736659964263!2d139.72707631467196!3d35.660410980199195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b770913970d%3A0xccc3467fcb15b353!2zR29vZ2xl5ZCI5ZCM5Lya56S-!5e0!3m2!1sja!2sjp!4v1563681711374!5m2!1sja!2sjp"
+                    width="720" height="515" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!--=====Contact Us============  -->
+        <div class="anchor5" id="contact"></div>
+
+        <div class="contact-back">
+            <div class="contact-wrap">
+                <div class="contact-title">
+                    <h2 class="english">Contact Us</h2>
+                    <p>どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。</p>
+                </div>
+                <div class="contact-form">
+                    <div class="slect-form">
+                        <p>お問い合わせ種別</p>
+                        <select class="select-test">
+                            <option>選択してください</option>
+                            <option>当社について</option>
+                            <option>料金について</option>
+                            <option>その他</option>
+                        </select>
+                    </div>
+                    <div class="name-wrap">
+                        <div class="name">
+                            <p>氏名</p>
+                            <div class="hissu">必須</div>
+                        </div>
+                        <input class="input-text" type="text" placeholder="氏名">
+                    </div>
+                    <div class="hurigana-wrap">
+                        <div class="hurigana">
+                            <p>フリガナ</p>
+                            <div class="hissu">必須</div>
+                        </div>
+                        <input class="input-text" type="text" placeholder="フリガナ">
+                    </div>
+                    <div class="mail">
+                        <p>メールアドレス</p>
+                        <input class="input-text" type="text" placeholder="sample@gmail.com">
+                    </div>
+                    <div class="sex">
+                        <p>性別</p>
+                        <div class="radio-wrap">
+                            <label><input class="radio-test" type="radio" name="radio-name"><span>男性</span></label>
+                            <label><input class="radio-test" type="radio" name="radio-name"><span>女性</span></label>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <p>メッセージ</p>
+                        <textarea class="textarea-text"></textarea>
+                    </div>
+                    <div class="privacy">
+                        <label><input class="check-test" type="checkbox" name="check-name">
+                            <span>
+                                <a href="">個人情報保護方針に同意する</a>
+                            </span></label>
+                    </div>
+                    <div class="submit-btn">
+                        <input class="submit-test" type="submit" value="送信する">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--=====footer============  -->
+        <footer>
+            <div class="footer-wrap">
+                <div class="footer-left">
+                    <div class="sns-icon">
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-facebook-square"></i></a>
+                    </div>
+                    <p><a href="">サイトマップ</a></p>
+                    <p><a href="">個人情報保護方針</a></p>
+                    <p><a href="">プライバシーポリシー</a></p>
+                </div>
+                <div class="footer-right">
+                    <p class="corp">HANIWAMAN Corp.</p>
+                    <p class="copyright">© HANIWAMAN Landing page Sample.</p>
+                </div>
+            </div>
+
+
+        </footer>
 
 
 
-
-
-
-
-
-        <br><br><br><br>
-        <br><br><br><br>
-        <br><br><br><br>
+        <div class="floating">
+            <div class="jump-icon">TOP</div>
+        </div>
     </main>
 
 
 
-    <!-- swiper js -->
+    <!-- swiper用CDN/js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
-    <script src="test.js"></script>
+    <!-- ドロワー用CDN/drawer.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/js/drawer.min.js"></script>
+    <script src="jquery/30days.js"></script>
 </body>
 
 </html>
