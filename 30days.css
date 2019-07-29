@@ -595,7 +595,7 @@ header .drawer-hamburger {
 }
 
 .contact-back {
-  background-image: url(../img/swan.jpg);
+  background-image: url(img/swan.jpg);
   background-size: cover;
   background-position: center center;
   padding: 80px 0;
@@ -612,7 +612,7 @@ header .drawer-hamburger {
 .contact-wrap .contact-title {
   padding: 61.5px 0;
   text-align: center;
-  background-image: url(../img/image.jpg);
+  background-image: url(img/image.jpg);
   background-size: cover;
   background-position: center center;
   position: relative;
