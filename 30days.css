@@ -45,7 +45,7 @@ h2.english {
 }
 
 .top-wrap {
-  background-image: url(../img/back.jpeg);
+  background-image: url(img/back.jpeg);
   background-position: center center;
   background-size: cover;
   width: 100%;
@@ -444,7 +444,7 @@ header .drawer-hamburger {
 }
 
 .faqs-back {
-  background-image: url(../img/human.jpg);
+  background-image: url(img/human.jpg);
   background-size: cover;
   background-position: center center;
   padding: 0 109px 80px 0;
